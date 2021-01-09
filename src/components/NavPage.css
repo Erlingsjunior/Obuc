@@ -1,0 +1,15 @@
+.mb-2 {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 10%;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.buttonNav {
+    width: 80%;
+}
+

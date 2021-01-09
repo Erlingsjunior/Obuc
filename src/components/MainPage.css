@@ -1,0 +1,27 @@
+/*div {
+    border: 1px solid red;
+}*/
+
+.displayFlex {
+    display:flex;
+    margin-left: 10%;
+}
+
+.displayFlex div {
+    display:flex;
+    flex-direction: column;
+}
+
+.titulo {
+    margin-left: 3em;
+}
+
+#botao {
+    display: flex;
+    margin-top: 32px;
+    margin-left: 20px;
+    justify-content: center;
+    font-weight: bolder;
+    width:35px;
+    height: 35px;
+}
