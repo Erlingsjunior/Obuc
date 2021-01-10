@@ -15,7 +15,9 @@ class MainPage extends React.Component {
     }
 
     componentDidMount() {
-        let arrLocaisTrabalho = JSON.parse(sessionStorage.getItem("arrLocaisTrabalho"))
+        let arrLocaisTrabalho = JSON.parse(
+            sessionStorage.getItem(
+                "arrLocaisTrabalho"))
         if (arrLocaisTrabalho === null) {
             arrLocaisTrabalho = [];
         }
@@ -24,15 +26,33 @@ class MainPage extends React.Component {
 
     handleSubmit(element) {
         const { arrLocaisTrabalho } = this.state;
-        this.setState({ arrLocaisTrabalho: [...arrLocaisTrabalho, element] })
-        sessionStorage.setItem("arrLocaisTrabalho", JSON.stringify([...arrLocaisTrabalho, element]))
-
+        this.setState({
+            arrLocaisTrabalho: [
+                ...arrLocaisTrabalho,
+                element]
+        })
+        sessionStorage.setItem(
+            "arrLocaisTrabalho",
+            JSON.stringify([
+                ...arrLocaisTrabalho,
+                element]))
     }
 
     handleDelete(element) {
         const { arrLocaisTrabalho } = this.state;
-        this.setState({ arrLocaisTrabalho: arrLocaisTrabalho.filter((e) => e !== element) })
-        sessionStorage.setItem("arrLocaisTrabalho", JSON.stringify(arrLocaisTrabalho.filter((e) => e !== element)))
+        this.setState({
+            arrLocaisTrabalho: arrLocaisTrabalho
+                .filter((e) =>
+                    e !== element)
+        })
+        sessionStorage
+            .setItem("arrLocaisTrabalho",
+                JSON.stringify(
+                    arrLocaisTrabalho
+                        .filter(
+                            (e) =>
+                                e !== element)
+                ))
     }
 
     render() {
@@ -46,8 +66,14 @@ class MainPage extends React.Component {
                     <h2>Locais de Trabalho</h2>
                     <br />
                 </header>
-                <Forms handleSubmit={this.handleSubmit} />
-                <MainTable main={arrLocaisTrabalho} handleDelete={this.handleDelete} />
+                <Forms
+                    handleSubmit={this.handleSubmit}
+                />
+
+                <MainTable
+                    main={arrLocaisTrabalho}
+                    handleDelete={this.handleDelete}
+                />
             </div>
         )
     }
