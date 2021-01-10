@@ -3,11 +3,7 @@ import { Table, Button } from 'react-bootstrap';
 import './MainTable.css';
 
 class MainTable extends React.Component {
-    render() {
-
-        const handleDelete = () => {
-
-        }
+    render() {        
 
         return (
 
