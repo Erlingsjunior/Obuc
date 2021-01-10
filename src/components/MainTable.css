@@ -1,0 +1,7 @@
+.div {    
+    margin-left: 10%;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+}

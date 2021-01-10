@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Jumbotron } from 'react-bootstrap';
+import HeadPage from './components/Headpage';
+import NavPage from './components/NavPage';
+import MainPage from './components/MainPage';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         Starting Project
-        </a>
+    <Jumbotron className="divFather">
+      <header className="imageTop" >
+        <HeadPage />;
       </header>
-    </div>
-  );
+      <section className="section">
+        <div className="bodyNav">
+          <NavPage />
+        </div>
+        <main className="bodyMain">
+          <MainPage />
+        </main>
+      </section>
+
+    </Jumbotron>
+  )
 }
 
 export default App;
